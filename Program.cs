@@ -10,12 +10,24 @@ namespace ConsoleApplication4
     {
         static void Main(string[] args)
         {
-            int celsius, faren;
-            Console.WriteLine("Enter the Temperature in Celsius(°C) : ");
-            celsius = int.Parse(Console.ReadLine());
-            faren = (celsius * 9) / 5 + 32;
-            Console.WriteLine("0Temperature in Fahrenheit is(°F) : " + faren);
-            Console.ReadLine();
+            Console.WriteLine("Enter Number of Elements you Want to Hold in the Array ? ");
+            string s = Console.ReadLine();
+            int x = Int32.Parse(s);
+            int[] a = new int[x];
+            Console.WriteLine("\n Enter Array Elements : ");
+            for (int i = 0; i < x; i++)
+            {
+                string s1 = Console.ReadLine();
+                a[i] = Int32.Parse(s1);
+            }
+
+            Array.Reverse(a);
+            Console.WriteLine("Reversed Array : ");
+            for (int i = 0; i < x; i++)
+            {
+                Console.WriteLine("Element {0} is {1}", i + 1, a[i]);
+            }
+            Console.Read();
         }
     }
 }
