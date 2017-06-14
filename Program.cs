@@ -10,27 +10,18 @@ namespace ConsoleApplication4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter number of array you want: ");
-            string s= Console.ReadLine();
-            int x = Convert.ToInt32(s);
+            DateTime sd= new DateTime(2017,6,15);
+            Console.WriteLine("Starting date: {0}",sd);
 
-            int[] a= new int [x];
-            Console.WriteLine("Enter array elements: ");
+            DateTime ed = sd.AddDays(10);
+            Console.WriteLine("Ending date: {0}",ed);
 
-            for (int i = 0; i < x; i++)
+
+            if (ed > sd)
             {
-                string s1 = Console.ReadLine();
-                a[i] = Convert.ToInt32(s1);
-
+                Console.WriteLine("{0} occurs after {1}",sd,ed);
             }
 
-            Array.Sort(a);
-            Console.WriteLine("Sorted array: ");
-
-            for (int i = 0; i < x; i++)
-            {
-                Console.WriteLine("Elements: {0}",a[i]);
-            }
             Console.Read();
         }
     }
