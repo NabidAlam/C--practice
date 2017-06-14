@@ -10,23 +10,13 @@ namespace ConsoleApplication4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter Number of Elements you Want to Hold in the Array ? ");
-            string s = Console.ReadLine();
-            int x = Int32.Parse(s);
-            int[] a = new int[x];
-            Console.WriteLine("\n Enter Array Elements : ");
-            for (int i = 0; i < x; i++)
-            {
-                string s1 = Console.ReadLine();
-                a[i] = Int32.Parse(s1);
-            }
-
-            Array.Reverse(a);
-            Console.WriteLine("Reversed Array : ");
-            for (int i = 0; i < x; i++)
-            {
-                Console.WriteLine("Element {0} is {1}", i + 1, a[i]);
-            }
+            Console.WriteLine("Trignometric values in Degree");
+            Console.WriteLine("sin (60)     = {0}", Math.Sin(60 * Math.PI / 180));
+            Console.WriteLine("cos (60)     = {0}", Math.Cos(60 * Math.PI / 180));
+            Console.WriteLine("tan (60)     = {0}", Math.Tan(60 * Math.PI / 180));
+            Console.WriteLine("arcsin (1/2) = {0}", Math.Asin(0.5) * 180 / Math.PI);
+            Console.WriteLine("arccos (1/2) = {0}", Math.Acos(0.5) * 180 / Math.PI);
+            Console.WriteLine("arctan (1/2) = {0}", Math.Atan(0.5) * 180 / Math.PI);
             Console.Read();
         }
     }
