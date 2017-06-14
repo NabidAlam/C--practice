@@ -10,19 +10,12 @@ namespace ConsoleApplication4
     {
         static void Main(string[] args)
         {
-            int i;
-            Console.Write("Enter a Number : ");
-            i = int.Parse(Console.ReadLine());
-            if (i % 2 == 0)
-            {
-                Console.Write("Entered Number is an Even Number");
-                Console.Read();
-            }
-            else
-            {
-                Console.Write("Entered Number is an Odd Number");
-                Console.Read();
-            }
+            int celsius, faren;
+            Console.WriteLine("Enter the Temperature in Celsius(°C) : ");
+            celsius = int.Parse(Console.ReadLine());
+            faren = (celsius * 9) / 5 + 32;
+            Console.WriteLine("0Temperature in Fahrenheit is(°F) : " + faren);
+            Console.ReadLine();
         }
     }
 }
